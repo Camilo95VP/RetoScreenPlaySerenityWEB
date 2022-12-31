@@ -7,9 +7,14 @@ import io.cucumber.java.es.Entonces;
 import io.cucumber.java.es.Y;
 import org.apache.log4j.Logger;
 
+import static co.com.sofka.questions.ValidarMensajes.validarDosMensajes;
 import static co.com.sofka.tasks.landingpage.OpenLandingPage.openLandingPage;
 import static co.com.sofka.tasks.llenarformulario.LlenarFormulario.llenarFormulario;
 import static co.com.sofka.tasks.ofertaspage.BuscarOferta.buscarOferta;
+import static co.com.sofka.userinterfaces.orderpage.OrderPage.MENSAJE_COMPRA_EXITOSA;
+import static co.com.sofka.utils.Constantes.MENSAJE_ESPERADO_COMPRA_EXITOSA;
+import static co.com.sofka.utils.Utilidades.obtenerMensajeLocalizador;
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 public class CompraExitosaStepDefinition extends Setup {
@@ -59,5 +64,21 @@ public class CompraExitosaStepDefinition extends Setup {
 
     @Entonces("el cliente podra ver la factura de su compra")
     public void verFacturaDeCompra() {
+
+        try{
+            if(MENSAJE_COMPRA_EXITOSA.isVisibleFor(theActorInTheSpotlight())){
+                theActorInTheSpotlight().should(
+                        seeThat(validarDosMensajes(
+                                MENSAJE_ESPERADO_COMPRA_EXITOSA.getValor()
+                                ,obtenerMensajeLocalizador(theActorInTheSpotlight(),MENSAJE_COMPRA_EXITOSA)))
+                );
+            }
+            else{
+                LOGGER.warn("Uno o mas articulos no estan disponibles");
+            }
+        }catch(Exception e){
+            LOGGER.error(e.getMessage());
+        }
+
     }
 }

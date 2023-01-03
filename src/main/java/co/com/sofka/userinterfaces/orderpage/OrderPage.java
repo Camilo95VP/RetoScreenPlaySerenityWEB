@@ -30,4 +30,7 @@ public class OrderPage extends PageObject {
     public static final Target MENSAJE_COMPRA_EXITOSA=Target
             .the("Mensaje compra exitosa")
             .located(xpath("//p[@class='success-color woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received']"));
+    public static final Target MENSAJE_COMPRA_NO_EXITOSA=Target
+            .the("Mensaje compra no exitosa")
+            .located(xpath("//div[@class='woocommerce-NoticeGroup woocommerce-NoticeGroup-checkout']"));
 }

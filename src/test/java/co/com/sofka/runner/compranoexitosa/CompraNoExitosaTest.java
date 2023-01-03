@@ -7,8 +7,8 @@ import org.junit.runner.RunWith;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
         snippets = CucumberOptions.SnippetType.CAMELCASE,
-        features = {"src/test/resources/features/unsuccessfulpurchase/unsuccessfulpurchase.feature"},
-        glue={"co.com.sofka.stepdefinition.unsuccessfulpurchase"},
+        features = {"src/test/resources/features/compranoexitosa/compranoexitosa.feature"},
+        glue={"co.com.sofka.stepdefinition.compranoexitosa"},
         tags="not @ignore"
 )
 public class CompraNoExitosaTest {

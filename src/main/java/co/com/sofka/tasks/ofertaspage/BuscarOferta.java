@@ -40,15 +40,6 @@ public class BuscarOferta implements Task {
                 Click.on(OFERTAS),
                 Click.on(OFERTAS),
 
-/*                WaitUntil.the(PRODUCTOS, WebElementStateMatchers.isVisible()).forNoMoreThan(Duration.ofSeconds(15)),
-                Scroll.to(PRODUCTOS),
-                clickRandomItem(PRODUCTOS),
-                WaitUntil.the(BTN_CERRAR,isClickable()).forNoMoreThan(Duration.ofSeconds(15)),
-                Click.on(BTN_CERRAR),
-                Scroll.to(OFERTAS),
-                Click.on(OFERTAS),
-                Click.on(OFERTAS),
-
                 WaitUntil.the(PRODUCTOS, WebElementStateMatchers.isVisible()).forNoMoreThan(Duration.ofSeconds(15)),
                 Scroll.to(PRODUCTOS),
                 clickRandomItem(PRODUCTOS),
@@ -62,7 +53,16 @@ public class BuscarOferta implements Task {
                 Scroll.to(PRODUCTOS),
                 clickRandomItem(PRODUCTOS),
                 WaitUntil.the(BTN_CERRAR,isClickable()).forNoMoreThan(Duration.ofSeconds(15)),
-                Click.on(BTN_CERRAR),*/
+                Click.on(BTN_CERRAR),
+                Scroll.to(OFERTAS),
+                Click.on(OFERTAS),
+                Click.on(OFERTAS),
+
+                WaitUntil.the(PRODUCTOS, WebElementStateMatchers.isVisible()).forNoMoreThan(Duration.ofSeconds(15)),
+                Scroll.to(PRODUCTOS),
+                clickRandomItem(PRODUCTOS),
+                WaitUntil.the(BTN_CERRAR,isClickable()).forNoMoreThan(Duration.ofSeconds(15)),
+                Click.on(BTN_CERRAR),
 
                 WaitUntil.the(BTN_CARRITO,isClickable()).forNoMoreThan(Duration.ofSeconds(10)),
                 Click.on(BTN_CARRITO),

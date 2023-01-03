@@ -7,7 +7,7 @@
 
 ## ✅ Objetivos del proyecto
 
-- Automatizacion con el patron de diseño ScreenPlay, selenium y cucumber.
+- Automatizacion con el patron de diseño ScreenPlay, Serenity y Cucumber.
 
 __IMPORTANTE:__
 
